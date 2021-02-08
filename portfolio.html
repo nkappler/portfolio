@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <title>Nikolaj Kappler | Portfolio</title>
+    <style>
+        * {
+            position: relative;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            background-color: #555;
+            font-family: 'Comfortaa', cursive;
+            color: white;
+        }
+
+        body>* {
+            padding: 1vw
+        }
+
+        img {
+            max-width: 70vw;
+            margin: 100px auto;
+            display: block;
+            left: -10vw;
+            padding: 0;
+        }
+
+        img:nth-child(2n-1) {
+            left: 10vw;
+        }
+
+
+        .header {
+            width: 100%;
+            height: 70vh;
+            background: linear-gradient(rgba(85, 85, 85, .5), #555), url("./Scene1.jpg");
+            background-size: cover;
+        }
+
+        .header span {
+            font-size: 15vh;
+            display: block;
+            margin-left: 30vw;
+        }
+
+        .header span:nth-of-type(2) {
+            margin-left: 35vw;
+        }
+
+        .header p {
+            font-size: 3vh;
+        }
+
+        .flex {
+            display: flex;
+            width: 90vw;
+            margin: auto;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10vw;
+        }
+
+        .flex img {
+            max-width: 50vw;
+            left: 0;
+            margin: 0;
+        }
+
+        .flex p {
+            margin: 10vw;
+            height: min-content;
+        }
+
+        a {
+            color: #00ccff;
+            text-decoration: underline dashed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <p>Nikolaj Kappler</p>
+        <span>POR</span>
+        <span>TFO</span>
+        <span>LIO</span>
+    </div>
+
+    <h1>Blender Renders</h1>
+    <img src="./Denoised.png" />
+    <img src="./Donut_Rendered_2.jpg" />
+    <img src="./Lillasen1.jpg" />
+    <img src="./Lillasen3.jpg" />
+    <img src="./Lillasen2.jpg" />
+    <img src="./Render1.jpg" />
+    <img src="./Render2.jpg" />
+    <img src="./Scene1.jpg" />
+
+
+    <h1>Pixel Art</h1>
+    <p>These pixel art animations were made by creating a 3D model in blender, rendering it with very low resolution and
+        framerate. <br /> The result was then upscaled and a custom color palette with only a few colors was applied
+        with gimp.</p>
+    <div style="display: flex; align-items: center;">
+        <img src="./coin4.gif" />
+        <img src="./arcus3.gif" />
+    </div>
+
+
+    <h1>Video games</h1>
+    <h2>Centipede</h2>
+    <div class="flex">
+        <img src="./centipede.png">
+        <p>This is a university project that I've created back in 2016 with C++ and OpenGL.
+            It is a (very bad) clone of the <a href="https://en.wikipedia.org/wiki/Centipede_(video_game)"
+                target="blank">1980s
+                Arcade Game</a>.<br /><br />
+
+            The game is very incomplete: There are neither points, nor highscores, the only enemy is the centipede and
+            you only have
+            one life. There are no levels and the mushrooms don't change colors like in the original, but at least
+            there's an end
+            screen (made of mushrooms).<br /><br />
+
+            You can download it <a download=""
+                href="https://github.com/nkappler/Centipede/releases/download/v0.1/Release.zip">here</a></p>
+    </div>
+
+
+    <h2>Bacteria Raid</h2>
+    <div class="flex" style="flex-direction: row-reverse;">
+        <img src="./bacteria-raid.png" />
+        <p>Bacteria Raid is another university project. We have created this game in a group of three.<br /><br />
+            You are in control of a bacteria infiltrating the body. You need to reach the end of the level (blood
+            vessel)
+            without dying.
+            The game was made with Unreal Engine, the Models were created with Blender.</p>
+    </div>
+
+</body>
+
+</html>
