@@ -21,7 +21,7 @@
         }
 
         html {
-            overflow: hidden;
+            overflow: hidden auto;
         }
 
         .mobile-nav-toggle {
@@ -61,7 +61,7 @@
 
         .header {
             width: 100%;
-            height: min(70vh, 80vw);
+            height: min(70vh, calc(42vw + 157px + 4vh));
             background: linear-gradient(rgba(85, 85, 85, .5), #555), url("./wz1.png");
             background-size: cover;
             margin-top: -157px;
@@ -82,6 +82,7 @@
 
         .header p {
             font-size: 3vh;
+            line-height: 4vh;
             margin-top: 157px;
         }
 
