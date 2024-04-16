@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
     <title>Nikolaj Kappler | Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="https://www.nkappler.de/index.css" />
+    <script type="text/javascript" src="https://www.nkappler.de/index.js" defer></script>
     <style>
         * {
             position: relative;
@@ -14,17 +20,22 @@
             margin: 0;
         }
 
+        .mobile-nav-toggle {
+            background-image: url(https://www.nkappler.de/assets/shared/icon-hamburger.svg) !important;
+        }
+
         body {
             background-color: #555;
-            font-family: 'Comfortaa', cursive;
+            font-family: 'Comfortaa', cursive !important;
             color: white;
         }
 
-        body>* {
+        body>*:not(header) {
+            font-family: 'Comfortaa', cursive !important;
             padding: 1vw
         }
 
-        img {
+        img:not([alt="nkappler logo"]) {
             max-width: 70vw;
             margin: 100px auto;
             display: block;
@@ -39,7 +50,7 @@
             box-shadow: none;
         }
 
-        img:nth-child(2n-1) {
+        img:nth-child(2n-1):not([alt="nkappler logo"]) {
             left: 10vw;
         }
 
@@ -47,12 +58,15 @@
         .header {
             width: 100%;
             height: 70vh;
-            background: linear-gradient(rgba(85, 85, 85, .5), #555), url("./Scene1.jpg");
+            background: linear-gradient(rgba(85, 85, 85, .5), #555), url("./wz1.png");
             background-size: cover;
+            margin-top: -157px;
+            z-index: -1;
         }
 
         .header span {
             font-size: 15vh;
+            line-height: 15vh;
             display: block;
             margin-left: 30vw;
         }
@@ -63,9 +77,10 @@
 
         .header p {
             font-size: 3vh;
+            margin-top: 157px;
         }
 
-        .flex {
+        .centipede {
             display: flex;
             width: 90vw;
             margin: auto;
@@ -74,13 +89,13 @@
             margin-bottom: 10vw;
         }
 
-        .flex img {
+        .centipede img {
             max-width: 50vw;
-            left: 0;
+            left: 0 !important;
             margin: 0;
         }
 
-        .flex p {
+        .centipede p {
             margin: 10vw;
             height: min-content;
         }
@@ -89,10 +104,74 @@
             color: #00ccff;
             text-decoration: underline dashed;
         }
+
+        [data-wip] {
+            margin: 100px auto;
+            width: fit-content;
+        }
+
+        [data-wip] img {
+            margin: 0;
+            left: 0 !important;
+        }
+
+        [data-wip]::after {
+            content: "Work in Progress";
+            position: absolute;
+            inset: 3vw;
+            color: white;
+            padding: 1vw;
+            font-size: 3vh;
+            line-height: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: end;
+        }
     </style>
 </head>
 
 <body>
+    <header class="primary-header flex">
+        <div>
+            <span class="logo">
+                <img src="https://www.nkappler.de/assets/shared/logo.svg" alt="nkappler logo">
+            </span>
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav>
+            <ul data-visible="false" id="primary-navigation"
+                class="primary-navigation underline-indicators flex ff-sans-cond uppercase letter-spacing-2"
+                role="list">
+                <li>
+                    <a class="text-white" href="https://www.nkappler.de/index.html">
+                        <span aria-hidden="true">01</span>Home
+                    </a>
+                </li>
+                <li>
+                    <a class="text-white" href="https://www.nkappler.de/work.html">
+                        <span aria-hidden="true">02</span>Work
+                    </a>
+                </li>
+                <li>
+                    <a class="text-white" href="https://www.nkappler.de/about.html">
+                        <span aria-hidden="true">03</span>About
+                    </a>
+                </li>
+                <li>
+                    <a class="text-white" href="https://www.nkappler.de/contact.html">
+                        <span aria-hidden="true">04</span>Contact
+                    </a>
+                </li>
+                <li class="active">
+                    <a class="text-white" href="https://www.nkappler.de/portfolio">
+                        <span aria-hidden="true">05</span>Portfolio
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="header">
         <p>Nikolaj Kappler</p>
@@ -102,11 +181,17 @@
     </div>
 
     <h1>Blender Renders</h1>
+
     <img src="./device2.jpg" />
     <img src="./device1.jpg" />
     <img src="./Denoised.png" />
-    <img src="./kitchen.jpg" />
+    <div data-wip><img src="./kitchen.jpg" /></div>
+    <div data-wip><img src="./Bad_Ulme.png" /></div>
+    <div data-wip><img src="./Arbeitszimmer2.png" /></div>
+    <div data-wip><img src="./wz1.png" /></div>
+    <div data-wip><img src="./wz2.png" /></div>
     <img src="./Donut_Rendered_2.jpg" />
+    <img src="./thumbnail.png" />
     <img src="./Lillasen1.jpg" />
     <img src="./Lillasen3.jpg" />
     <img src="./Lillasen2.jpg" />
@@ -126,7 +211,7 @@
 
     <h1>Video games</h1>
     <h2>Centipede</h2>
-    <div class="flex">
+    <div class="centipede">
         <img src="./centipede.png">
         <p>This is a university project that I've created back in 2016 with C++ and OpenGL.
             It is a (very bad) clone of the <a href="https://en.wikipedia.org/wiki/Centipede_(video_game)"
@@ -145,7 +230,7 @@
 
 
     <h2>Bacteria Raid</h2>
-    <div class="flex" style="flex-direction: row-reverse;">
+    <div class="centipede" style="flex-direction: row-reverse;">
         <img src="./bacteria-raid.jpg" />
         <p>Bacteria Raid is another university project. We have created this game in a group of three.<br />
             You are in control of a bacteria infiltrating the body. You need to reach the end of the level (the blood
